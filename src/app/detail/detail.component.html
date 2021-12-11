@@ -1,0 +1,21 @@
+
+<div class="c1" >
+<div class="container mt-3" class="c2">
+    <h2>Détails sur cette destination</h2>
+    <div class="card" style="width:500px">
+      <img class="card-img-top" src="{{voyage.photo}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{voyage.nom}}</h4>
+        <p class="card-text">-Le prix est : {{voyage.prix |number:'.3'}} DT<br>
+            - La date de départ :{{voyage.datedepart|date:'dd/MM/yyyy'}}<br>
+            -La date de retour:{{voyage.dateretour|date:'dd/MM/yyyy'}}<br>
+            -Ce voyage se déroule {{voyage.nbrejour}}jours <br></p>
+       En promotion : <input type="checkbox" checked="{{voyage.enpromotion}}" ><br>
+       <button [routerLink]="['/voyage']"  class="btn btn-warning" >Retour</button> 
+
+      </div>
+    </div>
+    <br>
+</div>
+
+

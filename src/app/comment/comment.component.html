@@ -1,0 +1,17 @@
+
+<div class="row" class="c1" >
+  <div  class="container pt-3 col-12 col-sm-4" >
+      <div class="card" style="width:500px">
+        <img class="card-img-top" src="{{comment.img}}" alt="Card image" style="width:70%">
+        <div class="card-body">
+          <h4 class="card-title">le point de vue de :</h4>
+          <p class="card-text">- {{comment.name|uppercase|chaine}} <br>
+            Le {{comment.date|date:'dd/yy/MMMM'}}<br>
+            {{comment.message}}
+        </div>
+      </div>
+      <br>
+  </div>
+
+
+  

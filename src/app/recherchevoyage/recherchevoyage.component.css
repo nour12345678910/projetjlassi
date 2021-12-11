@@ -1,0 +1,9 @@
+.a{
+    background-image: url("../../assets/log.jpg");
+    background-size: cover;
+        color:white;
+        font-size:20px ;
+    }
+    table,tbody,td{
+        color:white;
+    }

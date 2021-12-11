@@ -1,0 +1,21 @@
+
+
+<div class="a" >
+<div class="container" >
+<form [formGroup]="productForm"  (ngSubmit)="onSubmit()"><br>
+    <div>Login :<input type="email" name="login" formControlName="login" class="form-control" required="required" pattern="nourjlassi@gmail.com$"></div><div *ngIf="isvalidlogin()" class="alert alert-warning"value="nour">Vous devez entrer un login vrai</div><br>
+    <div>Password:<input type="password" name="password" formControlName="password" class="form-control" required="required" pattern="nour123456789"></div><div *ngIf="isvalidpassword()" class="alert alert-warning" value="nour">mot de passe incorrecte !</div><br>
+    <button [routerLink]="['/recherchevoyage']"  class="btn btn-warning" id="i"  [disabled]="productForm.invalid" >Envoyer</button>
+</form>
+</div>
+</div>
+
+ 
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+
+<div class="c">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" >
+    <div class="container-fluid">
+      <a class="navbar-brand" >S'enregistrer</a>
+    </div>
+  </nav>
+
+<div class="container" >
+
+<form [formGroup]="productForm"  (ngSubmit)="onSubmit()" ><br>
+
+    <div class="t">Name <input type="text" name="nom" formControlName="nom" class="form-control" required pattern="[A-Z][a-z]+"></div><div *ngIf="isvalidpattern()" class="alert alert-warning">Le nom doit commencer par une lettre Majuscule</div><div *ngIf="isobligatoire()" class="alert alert-warning">le nom est obligatoire</div><br>
+Age<input type="number" name="age" formControlName="age" class="form-control"><br>
+Date naissance<input type="Date" name="datenaissance" formControlName="datenaissance"class="form-control"><br>
+Mail<input type="email" name="mail" formControlName="mail"class="form-control" required><div *ngIf="isobli()" class="alert alert-warning">Votre email obligatoire</div><br>
+Numéro téléphone<input type="number" name="numtel" formControlName="numtel"class="form-control" maxlength="8"><div *ngIf="isValidnumtel()" class="alert alert-danger"> Le numero de téléphone a une taille non valide </div><br>
+<div>Adresse<input type="text" name="adresse" formControlName="adresse"class="form-control" required pattern="[A-Z][a-z]+"></div><br>
+Ville<select class="form-select" formControlName="ville"class="form-control">
+   <option [value]="v" *ngFor="let v of villes">{{v}}</option>
+</select>
+destination à visiter <select class="form-select" formControlName="destination"class="form-control">
+    <option  *ngFor="let d of destinations" [value]="d">{{d}}</option>
+ </select>
+<br>
+
+<input  type="submit"  value="envoyer" class="btn btn-warning" [disabled]="productForm.invalid">  
+<input type="button" (click)="reset()" value="vider" class="btn btn-info">
+
+</form>
+</div>
+</div>
+
+

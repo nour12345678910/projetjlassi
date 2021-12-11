@@ -1,0 +1,27 @@
+
+<div id="a">
+
+  
+  <h1>La listes des destinations à visiter:</h1>
+  <h2>Search</h2>
+  <form [formGroup]="f">
+    <input type="text" formControlName="dest" #ref value="Type....." class="c2"> 
+    <button  (click)="oncherche(ref.value)"   class="c1" > Search</button>
+    </form>
+  <div class="row m-3" >
+     <div *ngFor="let v of lesvoyages"  class="col-md-4 ">
+       <img class="card-img-top" src="{{v.photo}}"/>
+       <div>{{v.nom}}</div>
+        <div class="card-body">
+          <button [routerLink]="['/voyage', v.id]"  class="btn btn-primary"  class="c1">Savoir plus de détails</button> 
+  
+       </div>
+      </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
